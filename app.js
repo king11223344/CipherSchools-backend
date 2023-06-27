@@ -13,7 +13,7 @@ const key = Buffer.from(
 );
 const iv = Buffer.from("caa1c9280dacd693a60cb5215cdf3773", "hex");
 const mongoURL =
-  "mongodb+srv://admin-shashank:Shashank11@cluster0.2gjrs.mongodb.net/ChipherSchoolDatabase?retryWrites=true&w=majority";
+  process.env.REACT_APP_MONGODB_URL
 mongoose.connect(mongoURL, {
   // useCreateIndex: true,
   useNewUrlParser: true,
